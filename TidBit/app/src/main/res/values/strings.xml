@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">TidBit</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="notification_service_name">TidBit Notification Service</string>
+</resources>
