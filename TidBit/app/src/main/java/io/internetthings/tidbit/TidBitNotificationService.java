@@ -15,6 +15,7 @@ public class TidBitNotificationService extends NotificationListenerService {
     @Override
     public void onNotificationPosted(StatusBarNotification sbn){
         Log.w(logTag, "Notification Posted****************" + sbn.getPackageName());
+        //adding a comment
     }
 
     @Override
