@@ -1,17 +1,21 @@
 package io.internetthings.tidbit;
 /*
     Created by: Jason Maderski and George Sapp
-    Date:03/28/2015
+    Date:03/29/2015
     Name: Tidbit
-    Version: 0.1
+    Version: 0.2
 
-    The Tidbit program, currently very simple and just say's "hi" and runs the Tidbit service if
+    v.1 - The Tidbit program, currently very simple and just say's "hi" and runs the Tidbit service if
     it is not running.
+
+    v0.2 - added button to take user to Notification access menu in settings
 
  */
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
 
 
@@ -59,6 +63,12 @@ public class MainActivity extends ActionBarActivity {
     /*The final call you receive before your activity is destroyed. */
     protected void onDestroy(){
         super.onDestroy();
+    }
+
+    //Takes user to the notification access menu
+    public void nAccessButton(View v){
+        Intent intent=new Intent("android.settings.ACTION_NOTIFICATION_LISTENER_SETTINGS");
+        startActivity(intent);
     }
 
     //Creates toast message
